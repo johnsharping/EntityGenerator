@@ -27,9 +27,9 @@ namespace 根据数据库生成实体
             this.Text = "Sql Server数据库生成实体     By JohnSharping     " + Properties.Resources.Version;
 
             txt服务器.Text = ".";
-            txt数据库.Text = "hishoptest";
+            txt数据库.Text = "test";
             txt用户名.Text = "sa";
-            txt密码.Text = "office2016";
+            txt密码.Text = "password";
             txtNameSpace.Text = "Entity";
             chk生成Contrib属性.Checked = true;
         }
