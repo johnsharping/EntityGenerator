@@ -199,7 +199,6 @@ namespace 根据数据库生成实体
                          ";
 
             var Cols = QueryData(sql);
-
             foreach (var col in Cols)
             {
                 if (chk生成Contrib属性.Checked)//如果选中则处理Contrib属性
@@ -223,7 +222,14 @@ namespace 根据数据库生成实体
                     s.Append("?");
                 }
                 s.Append(" " + col.字段名);
-                s.Append(" { get; set; }\r\n");
+                if (col.标识 == "√")//处理自增列
+                {
+                    s.Append(" { get; }\r\n");
+                }
+                else
+                {
+                    s.Append(" { get; set; }\r\n");
+                }
             }
 
             return s.ToString();
