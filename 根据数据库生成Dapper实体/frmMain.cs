@@ -228,7 +228,8 @@ namespace 根据数据库生成实体
                 s.Append(" " + col.字段名);
                 if (col.标识 == "√")//处理自增列
                 {
-                    s.Append(" { get; }\r\n");
+                    //s.Append(" { get; }\r\n");
+                    s.Append(" { get; set; }\r\n");
                 }
                 else
                 {
