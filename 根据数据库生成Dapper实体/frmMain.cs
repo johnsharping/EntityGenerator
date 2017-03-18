@@ -166,6 +166,10 @@ namespace 根据数据库生成实体
                 s.Append("\r\n\tusing Dapper.Contrib.Extensions;");
             }
             s.Append("\r\n\r\n");
+            if (chk生成Contrib属性.Checked)
+            {
+                s.Append("\t[Table(\"[" + tabName + "]\")]\r\n");
+            }
             s.Append("\tpublic class " + tabName + "\r\n");//类名
             s.Append("\t{\r\n");
 
