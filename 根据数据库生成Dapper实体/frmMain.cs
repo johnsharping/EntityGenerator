@@ -93,9 +93,10 @@ namespace 根据数据库生成实体
 
         private void chk表全选_CheckedChanged(object sender, EventArgs e)
         {
+            bool Ischecked = chk表全选.Checked;
             for (int i = 0; i < chkList表.Items.Count; i++)
             {
-                chkList表.SetItemChecked(i, true);
+                chkList表.SetItemChecked(i, Ischecked);
             }
         }
 
